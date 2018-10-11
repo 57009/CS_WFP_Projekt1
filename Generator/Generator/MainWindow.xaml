@@ -4,9 +4,83 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Generator"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        mc:Ignorable="d" Height="600" Width="1024" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+
     <Grid>
-        
+        <!-- Menu + top bar-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+    
+        <!-- Menu -->
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="LightGray" Offset="1"/>
+                    <GradientStop Color="#FFE6E6E6"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+            </Grid.Effect>
+
+            <Grid Background="#FFA46FE4">
+                <TextBlock Text="DASHBOARD" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Black" Foreground="#FFBC96EA" FontSize="20" FontWeight="Bold"/>
+            </Grid>
+
+            <!-- Stack panel menu list-->
+            <StackPanel Grid.Row="1">
+                
+                <!--Menu button 1-->
+                <Button Margin="10" Height="30" Background="#FFB694DE">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Numeric1BoxMultipleOutline"></materialDesign:PackIcon>
+                        <TextBlock HorizontalAlignment="Center" Text="Menu 1 "></TextBlock>
+                    </Grid>
+                </Button>
+                
+                <!--Menu button 2-->
+                <Button Margin="10" Height="30" Background="#FFB694DE">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Numeric2BoxMultipleOutline"></materialDesign:PackIcon>
+                        <TextBlock HorizontalAlignment="Center" Text="Menu 2 "></TextBlock>
+                    </Grid>
+                </Button>
+                
+                <!--Menu button 3-->
+                <Button Margin="10" Height="30" Background="#FFB694DE">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Numeric3BoxMultipleOutline"></materialDesign:PackIcon>
+                        <TextBlock HorizontalAlignment="Center" Text="Menu 3 "></TextBlock>
+                    </Grid>
+                </Button>
+
+            </StackPanel>
+
+
+        </Grid>
+
+        <!-- Top bar buttons -->
+        <Grid x:Name="GridBarTop" Grid.ColumnSpan="2" Background="AliceBlue" MouseDown="GridBarTop_MouseDown">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
+                <Button Width="85" Height="25" Foreground="White" Margin="10,0" Click="ButtonAbout_Click">O autorze</Button>
+                <Button Width="25" Height="25" Foreground="White" Click="ButtonClose_Click">
+                    <materialDesign:PackIcon Kind="CloseBox"></materialDesign:PackIcon>
+                </Button>
+            </StackPanel>
+        </Grid>
     </Grid>
+    
+    
+    
 </Window>

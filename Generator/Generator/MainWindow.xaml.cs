@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using MaterialDesignThemes;
+using MaterialDesignColors;
 namespace Generator
 {
     /// <summary>
@@ -23,6 +24,25 @@ namespace Generator
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+
+        }
+
+        private void GridBarTop_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void ButtonAbout_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Tomasz Chorzępa \n" +
+            "w57009\n " +
+            "2018",
+            "Informacje o autorze projektu");
         }
     }
 }
