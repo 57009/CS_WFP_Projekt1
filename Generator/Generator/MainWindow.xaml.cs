@@ -16,8 +16,8 @@ using MaterialDesignThemes;
 using MaterialDesignColors;
 using System.Security.Cryptography;
 using System.Threading;
-
 //
+
 
 using System.Data;
 
@@ -54,6 +54,23 @@ namespace Generator
         private void CleanListButton_Click(object sender, RoutedEventArgs e)
         {
             this.OutputTextBox.Text = null;
+        }
+
+        //
+        
+
+        private void SaveListButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                System.IO.File.WriteAllText(@"OutputGenerator.txt", this.OutputTextBox.Text);
+                MessageBox.Show("Output file: OutputGenerator.txt", "Saved!");
+            }
+            catch
+            {
+                MessageBox.Show("Unable to write/overwrite.", "File error");
+            }
+  
         }
 
         //https://cezarywalenciuk.pl/blog/programing/post/c-string-z-losowymi-znaki
@@ -175,7 +192,7 @@ namespace Generator
             }
             else
             {
-                MessageBox.Show("Type integer value in amount section.","Perse error");
+                MessageBox.Show("Type integer value in amount section.","Parse error");
             }
 
               
@@ -194,7 +211,7 @@ namespace Generator
             }
             else
             {
-                MessageBox.Show("Type integer value in amount section.", "Perse error");
+                MessageBox.Show("Type integer value in amount section.", "Parse error");
             }
         }
 
@@ -210,7 +227,7 @@ namespace Generator
             }
             else
             {
-                MessageBox.Show("Type integer value in amount section.", "Perse error");
+                MessageBox.Show("Type integer value in amount section.", "Parse error");
             }
         }
 
@@ -226,7 +243,7 @@ namespace Generator
             }
             else
             {
-                MessageBox.Show("Type integer value in amount section.", "Perse error");
+                MessageBox.Show("Type integer value in amount section.", "Parse error");
             }
         }
 
@@ -242,7 +259,7 @@ namespace Generator
             }
             else
             {
-                MessageBox.Show("Type integer value in amount section.", "Perse error");
+                MessageBox.Show("Type integer value in amount section.", "Parse error");
             }
         }
 
@@ -258,7 +275,7 @@ namespace Generator
             }
             else
             {
-                MessageBox.Show("Type integer value in amount section.", "Perse error");
+                MessageBox.Show("Type integer value in amount section.", "Parse error");
             }
         }
 

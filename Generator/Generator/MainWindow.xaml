@@ -64,7 +64,7 @@
                     <Button Height="30" Width="90" Margin="5" Click="CleanListButton_Click">
                         <TextBlock HorizontalAlignment="Center" Text="Clean list" ></TextBlock>
                     </Button>
-                    <Button Height="30" Width="90" Margin="5">
+                    <Button Height="30" Width="90" Margin="5" Click="SaveListButton_Click">
                         <TextBlock HorizontalAlignment="Center" Text="Save list"></TextBlock>
                     </Button>
                 </StackPanel>
