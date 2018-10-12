@@ -35,17 +35,17 @@
                 <Grid Margin="25" Height="120">
                     <StackPanel Orientation="Vertical" Margin="5">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
-                            <TextBlock Text="Tekst 1111111" FontFamily="Champagne &amp; Limousines" VerticalAlignment="Center" Foreground="Gray" FontSize="20"/>
+                            <TextBlock Text="Chose amount, method and press on pattern." FontFamily="Champagne &amp; Limousines" VerticalAlignment="Center" Foreground="Gray" FontSize="20"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
-                            <TextBlock Text="Amount to generate:"  VerticalAlignment="Center" Foreground="Gray" FontSize="20"/>
+                            <TextBlock Text="Amount to generate:"  VerticalAlignment="Center" Foreground="#FF008046" FontSize="18"/>
                             <TextBox x:Name="textBoxAmount"  VerticalAlignment="Center"  TextWrapping="Wrap" Text="1" Width="50" Margin="20"/>
 
                         </StackPanel>
                         <!--generation modifier-->
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Randomization method: " FontSize="16" Foreground="#FF008046"/> 
+                            <TextBlock Text="Randomization method: " FontSize="18" Foreground="#FF008046"/> 
                             <RadioButton GroupName="CaseSize" x:Name="m1RadioButton" IsChecked="True" Content='LINQ "Range"' Margin="5" />
                             <RadioButton GroupName="CaseSize" x:Name="m2RadioButton" Content="RNGcsp"  Margin="5" />
                             <RadioButton GroupName="CaseSize" x:Name="m3RadioButton" Content="GUID"  Margin="5" />

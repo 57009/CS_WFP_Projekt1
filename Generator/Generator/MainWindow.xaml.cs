@@ -171,7 +171,6 @@ namespace Generator
             }
 
             return returnString;
-
         }
 
 
