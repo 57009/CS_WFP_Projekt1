@@ -44,5 +44,11 @@ namespace Generator
             "2018",
             "Informacje o autorze projektu");
         }
+
+        private void CleanListButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.OutputTextBox.Text = null;
+
+        }
     }
 }

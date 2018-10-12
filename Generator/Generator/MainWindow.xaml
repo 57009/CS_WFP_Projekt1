@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Generator"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
-        mc:Ignorable="d" Height="600" Width="1024" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        mc:Ignorable="d" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
 
     <Grid>
         <!-- Menu + top bar-->
@@ -33,22 +33,34 @@
 
                 <!-- Generator settings menu, checkboxes are here-->
                 <Grid Margin="25" Height="120">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 20">
-                        <TextBlock Text="Tekst 1111111" FontFamily="Champagne &amp; Limousines" VerticalAlignment="Center" Foreground="Gray" FontSize="20"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="20">
-                        <materialDesign:PackIcon Kind="AlertOutline" Foreground="Red" Width="10" Height="10" VerticalAlignment="Center" Margin="5 0"/>
-                        <TextBlock Text="TTette ddffd fdfdffd" FontSize="8" Foreground="#FF8522BD"/>
+                    <StackPanel Orientation="Vertical" Margin="5">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                            <TextBlock Text="Tekst 1111111" FontFamily="Champagne &amp; Limousines" VerticalAlignment="Center" Foreground="Gray" FontSize="20"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                            <TextBlock Text="Amount to generate:"  VerticalAlignment="Center" Foreground="Gray" FontSize="20"/>
+                            <TextBox x:Name="textBoxAmount"  VerticalAlignment="Center"  TextWrapping="Wrap" Text="1" Width="50" Margin="20"/>
+
+                        </StackPanel>
+                        <!--generation modifier-->
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Randomization method: " FontSize="16" Foreground="#FF008046"/> 
+                            <RadioButton GroupName="CaseSize" x:Name="m1RadioButton" Content='LINQ "Range"' Margin="5" />
+                            <RadioButton GroupName="CaseSize" x:Name="m2RadioButton" Content="RNGCryptoServiceProvider"  Margin="5" />
+                            <RadioButton GroupName="CaseSize" x:Name="m3RadioButton" Content="GUID"  Margin="5" />
+                        </StackPanel>
                     </StackPanel>
                 </Grid>
+               
             </Grid>
             <!-- Output text box + save/reset buttons-->
             <Grid Grid.Row="1">
                 <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="20">
-                    <RichTextBox Width="720" Height="300"></RichTextBox>
+                    <TextBox x:Name="OutputTextBox" Width="500" Height="200"></TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="50 10">
-                    <Button Height="30" Width="90" Margin="5">
+                    <Button Height="30" Width="90" Margin="5" Click="CleanListButton_Click">
                         <TextBlock HorizontalAlignment="Center" Text="Clean list" ></TextBlock>
                     </Button>
                     <Button Height="30" Width="90" Margin="5">
@@ -77,7 +89,7 @@
             </Grid.Effect>
 
             <Grid Background="#FFA46FE4">
-                <TextBlock Text="DASHBOARD" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Black" Foreground="#FFBC96EA" FontSize="20" FontWeight="Bold"/>
+                <TextBlock Text="PATTERNS:" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Black" Foreground="#FFBC96EA" FontSize="20" FontWeight="Bold"/>
             </Grid>
 
             <!-- Stack panel menu list-->
@@ -104,6 +116,30 @@
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="Numeric3BoxMultipleOutline"></materialDesign:PackIcon>
                         <TextBlock HorizontalAlignment="Center" Text="Menu 3 "></TextBlock>
+                    </Grid>
+                </Button>
+
+                <!--Menu button 4-->
+                <Button Margin="10" Height="30" Background="#FFB694DE">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Numeric4BoxMultipleOutline"></materialDesign:PackIcon>
+                        <TextBlock HorizontalAlignment="Center" Text="Menu 4 "></TextBlock>
+                    </Grid>
+                </Button>
+                
+                <!--Menu button 5-->
+                <Button Margin="10" Height="30" Background="#FFB694DE">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Numeric5BoxMultipleOutline"></materialDesign:PackIcon>
+                        <TextBlock HorizontalAlignment="Center" Text="Menu 5 "></TextBlock>
+                    </Grid>
+                </Button>
+
+                <!--Menu button 6-->
+                <Button Margin="10" Height="30" Background="#FFB694DE">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Numeric6BoxMultipleOutline"></materialDesign:PackIcon>
+                        <TextBlock HorizontalAlignment="Center" Text="Menu 6 "></TextBlock>
                     </Grid>
                 </Button>
 
