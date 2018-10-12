@@ -17,8 +17,50 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-    
-        <!-- Menu -->
+
+        <Grid Grid.Column="1" Background="#FF939393" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Column="0">
+                <Rectangle Height="120" Margin="20" Fill="White" RadiusY="10" RadiusX="10" >
+                    <Rectangle.Effect>
+                        <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                    </Rectangle.Effect>
+                </Rectangle>
+
+                <!-- Generator settings menu, checkboxes are here-->
+                <Grid Margin="25" Height="120">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 20">
+                        <TextBlock Text="Tekst 1111111" FontFamily="Champagne &amp; Limousines" VerticalAlignment="Center" Foreground="Gray" FontSize="20"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="20">
+                        <materialDesign:PackIcon Kind="AlertOutline" Foreground="Red" Width="10" Height="10" VerticalAlignment="Center" Margin="5 0"/>
+                        <TextBlock Text="TTette ddffd fdfdffd" FontSize="8" Foreground="#FF8522BD"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <!-- Output text box + save/reset buttons-->
+            <Grid Grid.Row="1">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="20">
+                    <RichTextBox Width="720" Height="300"></RichTextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="50 10">
+                    <Button Height="30" Width="90" Margin="5">
+                        <TextBlock HorizontalAlignment="Center" Text="Clean list" ></TextBlock>
+                    </Button>
+                    <Button Height="30" Width="90" Margin="5">
+                        <TextBlock HorizontalAlignment="Center" Text="Save list"></TextBlock>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+ 
+
+        <!-- Main menu-->
         <Grid Grid.Row="1">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
