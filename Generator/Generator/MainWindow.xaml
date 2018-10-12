@@ -47,8 +47,9 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Randomization method: " FontSize="16" Foreground="#FF008046"/> 
                             <RadioButton GroupName="CaseSize" x:Name="m1RadioButton" IsChecked="True" Content='LINQ "Range"' Margin="5" />
-                            <RadioButton GroupName="CaseSize" x:Name="m2RadioButton" Content="RNGCryptoServiceProvider"  Margin="5" />
+                            <RadioButton GroupName="CaseSize" x:Name="m2RadioButton" Content="RNGcsp"  Margin="5" />
                             <RadioButton GroupName="CaseSize" x:Name="m3RadioButton" Content="GUID"  Margin="5" />
+                            <RadioButton GroupName="CaseSize" x:Name="m4RadioButton" Content="RNGcsp Digits"  Margin="5" />
                         </StackPanel>
                     </StackPanel>
                 </Grid>
@@ -96,50 +97,50 @@
             <StackPanel Grid.Row="1">
                 
                 <!--Menu button 1-->
-                <Button Margin="10" Height="30" Background="#FFB694DE" Click="Button1_Click">
+                <Button Margin="10" Height="30" Background="#FFB694DE" Click="ButtonGen1_Click">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="Numeric1BoxMultipleOutline"></materialDesign:PackIcon>
-                        <TextBlock HorizontalAlignment="Center" Text="Menu 1 "></TextBlock>
+                        <TextBlock HorizontalAlignment="Center" Text="XXXX"></TextBlock>
                     </Grid>
                 </Button>
                 
                 <!--Menu button 2-->
-                <Button Margin="10" Height="30" Background="#FFB694DE">
+                <Button Margin="10" Height="30" Background="#FFB694DE" Click="ButtonGen2_Click">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="Numeric2BoxMultipleOutline"></materialDesign:PackIcon>
-                        <TextBlock HorizontalAlignment="Center" Text="Menu 2 "></TextBlock>
+                        <TextBlock HorizontalAlignment="Center" Text="XXXXXX"></TextBlock>
                     </Grid>
                 </Button>
                 
                 <!--Menu button 3-->
-                <Button Margin="10" Height="30" Background="#FFB694DE">
+                <Button Margin="10" Height="30" Background="#FFB694DE" Click="ButtonGen3_Click">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="Numeric3BoxMultipleOutline"></materialDesign:PackIcon>
-                        <TextBlock HorizontalAlignment="Center" Text="Menu 3 "></TextBlock>
+                        <TextBlock HorizontalAlignment="Center" Text="XXXX-XXXX"></TextBlock>
                     </Grid>
                 </Button>
 
                 <!--Menu button 4-->
-                <Button Margin="10" Height="30" Background="#FFB694DE">
+                <Button Margin="10" Height="30" Background="#FFB694DE" Click="ButtonGen4_Click">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="Numeric4BoxMultipleOutline"></materialDesign:PackIcon>
-                        <TextBlock HorizontalAlignment="Center" Text="Menu 4 "></TextBlock>
+                        <TextBlock HorizontalAlignment="Center" Text="XXX-XXX-XXX"></TextBlock>
                     </Grid>
                 </Button>
                 
                 <!--Menu button 5-->
-                <Button Margin="10" Height="30" Background="#FFB694DE">
+                <Button Margin="10" Height="30" Background="#FFB694DE" Click="ButtonGen5_Click">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="Numeric5BoxMultipleOutline"></materialDesign:PackIcon>
-                        <TextBlock HorizontalAlignment="Center" Text="Menu 5 "></TextBlock>
+                        <TextBlock HorizontalAlignment="Center" Text="  XXXX-XXXX-XXXX-XX"></TextBlock>
                     </Grid>
                 </Button>
 
                 <!--Menu button 6-->
-                <Button Margin="10" Height="30" Background="#FFB694DE">
+                <Button Margin="10" Height="30" Background="#FFB694DE" Click="ButtonGen6_Click">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="Numeric6BoxMultipleOutline"></materialDesign:PackIcon>
-                        <TextBlock HorizontalAlignment="Center" Text="Menu 6 "></TextBlock>
+                        <TextBlock HorizontalAlignment="Center" Text="       XXXX-XXXX-XXXX-XXXX"></TextBlock>
                     </Grid>
                 </Button>
 
