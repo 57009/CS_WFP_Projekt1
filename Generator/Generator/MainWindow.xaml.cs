@@ -26,23 +26,43 @@ namespace Generator
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// <remarks>
+    /// Główna klasa MainWindow
+    /// Ze względu na wielkość programu, klasa zawiera całą logikę.
+    /// </remarks>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// The class constructor.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// ButtonClose zamknie aplikację po kliknięciu.
+        /// </summary>
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        /// <summary>
+        /// Umożliwia przenoszenie programu.
+        /// </summary>
+        /// /// <remarks>
+        /// Ze względu na usunięcie systemowego paska górnego należy dodać możliwość przenoszenia programu.
+        /// Kliknięcie na pasek górny w programie i trzymanie LPM oraz przesunięcie spowoduje przesunięcie całego okienka.
+        /// </remarks>
         private void GridBarTop_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
         }
 
+        /// <summary>
+        /// Informacje o autorze programu.
+        /// </summary>
         private void ButtonAbout_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Tomasz Chorzępa \n" +
@@ -51,14 +71,21 @@ namespace Generator
             "Informacje o autorze projektu");
         }
 
+        /// <summary>
+        /// Czyszczenie pola output.
+        /// </summary>
         private void CleanListButton_Click(object sender, RoutedEventArgs e)
         {
             this.OutputTextBox.Text = null;
         }
 
-        //
-        
 
+        /// <summary>
+        /// Zapisanie do pliku tekstowego.
+        /// </summary>
+        /// <remarks>
+        /// Zapis do pliku w tejsamej lokalizacji co program.
+        /// </remarks>
         private void SaveListButton_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -73,9 +100,13 @@ namespace Generator
   
         }
 
-        //https://cezarywalenciuk.pl/blog/programing/post/c-string-z-losowymi-znaki
-
-
+        /// <summary>
+        /// Metoda Random do pseudolosowości.
+        /// </summary>
+        /// <param name="range"> Ilość losowych znaków na wyjściu.</param>
+        /// <seealso>
+        /// Metody losowania znaków: https://cezarywalenciuk.pl/blog/programing/post/c-string-z-losowymi-znaki
+        /// </seealso>
         public static string RandomString(int range) // LINQ “Range” - method 1
         {
             var chars = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -88,7 +119,14 @@ namespace Generator
             return result;
         }
 
-
+        /// <summary>
+        /// Metoda 
+        /// RNGCryptoServiceProvider do pseudolosowości.
+        /// </summary>
+        /// <param name="maxSize"> Ilość losowych znaków na wyjściu.</param>
+        /// <seealso>
+        /// Metody losowania znaków: https://cezarywalenciuk.pl/blog/programing/post/c-string-z-losowymi-znaki
+        /// </seealso>
         public static string GetUniqueKey(int maxSize) // RNGCryptoServiceProvider - method 2 (Secure Random Numbers)
         {
             char[] chars = new char[62];
@@ -107,6 +145,17 @@ namespace Generator
             return result.ToString();
         }
 
+        /// <summary>
+        /// Metoda 
+        /// RNGCryptoServiceProvider do pseudolosowości.
+        /// </summary>
+        /// <remarks>
+        /// Rozszerzenie metody do generowania wyłącznie cyfr.
+        /// </remarks>
+        /// <param name="maxSize"> Ilość losowych znaków na wyjściu.</param>
+        /// <seealso>
+        /// Metody losowania znaków: https://cezarywalenciuk.pl/blog/programing/post/c-string-z-losowymi-znaki
+        /// </seealso>
         public static string GetUniqueKeyDigits(int maxSize) // RNGCryptoServiceProvider - method 2.1 digits only
         {
             char[] chars = new char[62];
@@ -125,6 +174,14 @@ namespace Generator
             return result.ToString();
         }
 
+        /// <summary>
+        /// Metoda 
+        /// GuidString do pseudolosowości.
+        /// </summary>
+        /// <param name="numOfCharsNeeded"> Ilość losowych znaków na wyjściu.</param>
+        /// <seealso>
+        /// Metody losowania znaków: https://cezarywalenciuk.pl/blog/programing/post/c-string-z-losowymi-znaki
+        /// </seealso>
         public static string GuidString(int numOfCharsNeeded) // GUID - method 3
         {
             if (numOfCharsNeeded <= 32)
@@ -143,7 +200,10 @@ namespace Generator
             }
         }
 
-
+        /// <summary>
+        /// Wybór metody generowania znaków za pomocą radio button.
+        /// </summary>
+        /// <param name="numOfCharsGen"> Ilość losowych znaków na wyjściu.</param>
         public string PickMethod(int numOfCharsGen)
         {
            
@@ -176,7 +236,9 @@ namespace Generator
 
 
 
-
+        /// <summary>
+        /// Wybór wzorca z menu po lewej stronie.
+        /// </summary>
         private void ButtonGen1_Click(object sender, RoutedEventArgs e)
         {
 
